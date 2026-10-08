@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spice Garden Restaurant</title>
+<style>
+:root{--bg:#fffaf3;--soft:#fdeedd;--ink:#2b1a12;--mute:#76584a;--brand:#b3261e;--gold:#e8a21a;--line:#f0d9c0;--card:#ffffff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c120d;--soft:#2a1b13;--ink:#fbeede;--mute:#d2b9a6;--line:#4a3426;--card:#2a1b13}}
+:root[data-theme="dark"]{--bg:#1c120d;--soft:#2a1b13;--ink:#fbeede;--mute:#d2b9a6;--line:#4a3426;--card:#2a1b13}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6}
+h1,h2,h3,nav,.btn,.tag{font-family:"Segoe UI",system-ui,Arial,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 20px;flex-wrap:wrap}
+.logo{font-weight:800;color:var(--brand);font-size:1.2rem;font-family:"Segoe UI",Arial,sans-serif}
+nav{display:flex;gap:4px;overflow-x:auto}
+nav a{color:var(--mute);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:.92rem;white-space:nowrap;transition:.2s}
+nav a:hover{background:var(--soft);color:var(--ink)}
+.hero{text-align:center;padding:72px 20px;background:linear-gradient(135deg,#7d130f,#d9541e);color:#fff}
+.hero .em{font-size:3rem;display:inline-block;animation:fl 3s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion:reduce){.hero .em{animation:none}html{scroll-behavior:auto}}
+.hero h1{font-size:clamp(2.2rem,7vw,3.6rem);margin:8px 0}
+.hero p{max-width:480px;margin:0 auto 24px;font-size:1.1rem;opacity:.95}
+.btn{display:inline-block;background:var(--gold);color:#2b1a12;font-weight:700;text-decoration:none;padding:13px 28px;border-radius:999px;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.btn:focus-visible,nav a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+section{max-width:1000px;margin:0 auto;padding:48px 20px}
+h2{text-align:center;font-size:clamp(1.7rem,4vw,2.3rem);color:var(--brand);margin-bottom:6px}
+.sub{text-align:center;color:var(--mute);margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(179,38,30,.15)}
+.card .ic{font-size:2.2rem;display:block;margin-bottom:6px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.card h3{font-size:1.1rem}
+.price{color:var(--brand);font-weight:700;font-family:"Segoe UI",Arial,sans-serif}
+.card p{color:var(--mute);font-size:.95rem}
+.tag{display:inline-block;background:var(--soft);color:var(--brand);font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:999px;margin-top:8px}
+.about{background:var(--soft);border-radius:24px;text-align:center}
+.about p{max-width:600px;margin:0 auto}
+.info{text-align:center}
+.info .card{text-align:center}
+footer{text-align:center;color:var(--mute);padding:24px;border-top:1px solid var(--line);font-size:.9rem;font-family:"Segoe UI",Arial,sans-serif}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🍛 Spice Garden</div>
+  <nav><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+
+<div class="hero" id="home">
+  <span class="em">🍽️</span>
+  <h1>Spice Garden Restaurant</h1>
+  <p>Fresh, hot and full of flavour. Dine in, take away or order online.</p>
+  <a class="btn" href="#menu">View Menu</a>
+</div>
+
+<section id="menu">
+  <h2>Our Menu</h2>
+  <p class="sub">Customer favourites, made fresh every day</p>
+  <div class="grid">
+    <div class="card"><span class="ic">🍛</span><div class="row"><h3>Chicken Biryani</h3><span class="price">Rs 450</span></div><p>Fragrant rice layered with spiced chicken and raita.</p><span class="tag">Best Seller</span></div>
+    <div class="card"><span class="ic">🍗</span><div class="row"><h3>Chicken Karahi</h3><span class="price">Rs 1,400</span></div><p>Slow-cooked in tomato, ginger and green chilli.</p><span class="tag">Family Size</span></div>
+    <div class="card"><span class="ic">🥩</span><div class="row"><h3>Seekh Kabab</h3><span class="price">Rs 600</span></div><p>Juicy minced beef kababs grilled over charcoal.</p></div>
+    <div class="card"><span class="ic">🍔</span><div class="row"><h3>Zinger Burger</h3><span class="price">Rs 500</span></div><p>Crispy chicken fillet with sauce and fresh lettuce.</p></div>
+    <div class="card"><span class="ic">🍕</span><div class="row"><h3>Fajita Pizza</h3><span class="price">Rs 950</span></div><p>Cheesy pizza topped with chicken, peppers and onions.</p></div>
+    <div class="card"><span class="ic">🥤</span><div class="row"><h3>Mint Margarita</h3><span class="price">Rs 250</span></div><p>Cool and refreshing mint drink.</p></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about" style="padding:40px 20px">
+    <h2>About Us</h2>
+    <p>At Spice Garden we cook with fresh ingredients and traditional recipes. Whether it is a family dinner or a quick bite with friends, our goal is simple: tasty food, friendly service and a warm place to sit.</p>
+  </div>
+</section>
+
+<section id="contact" class="info">
+  <h2>Visit &amp; Order</h2>
+  <p class="sub">We are happy to serve you</p>
+  <div class="grid">
+    <div class="card"><span class="ic">📍</span><h3>Address</h3><p>Main Bazaar, Your City</p></div>
+    <div class="card"><span class="ic">🕒</span><h3>Opening Hours</h3><p>Every day, 12:00 PM to 11:00 PM</p></div>
+    <div class="card"><span class="ic">📞</span><h3>Call or WhatsApp</h3><p>0300-0000000</p></div>
+  </div>
+  <p style="margin-top:26px"><a class="btn" href="https://wa.me/920000000000" target="_blank" rel="noopener">Order on WhatsApp</a></p>
+</section>
+
+<footer>© 2026 Spice Garden. Sample website design by Natasha.</footer>
+</body>
+</html>
